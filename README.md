@@ -67,7 +67,7 @@ These modules can be added to any Cosmos-SDK based chain, but a demo application
 mkdir -p $GOPATH/src/github.com/xbridge-finance
 cd $GOPATH/src/github.com/xbridge-finance
 git clone https://github.com/xbridge-finance/poc-cosmos
-cd cosmos-ethereum-bridge && git checkout master
+cd poc-cosmos
 
 # Install dep, as well as your dependencies
 make get_tools

@@ -22,8 +22,6 @@ We are hoping to create a closed system for intra network transfers of cryptocur
 ## Ethereum Cosmos Bridge Architecture
 Unidirectional CashPool focuses on core features for unidirectional transfers. This prototype includes functionality to safely lock and unlock Ethereum and ERC20 tokens, emitting associated events which are witnessed by validators using the Relayer service. The Relayer is a service which interfaces with both blockchains, allowing validators to attest on the Cosmos blockchain that specific events on the Ethereum blockchain have occurred. The Relayer listens for `LogLock` events, parses information associated with the Ethereum transaction, uses it to build unsigned Cosmos transactions, and enables validators to sign and send the transactions to the Oracle module on Cosmos. Through the Relayer service, validators witness the events and submit proof in the form of signed hashes to the Cosmos based modules, which are responsible for aggregating and tallying the Validators’ signatures and their respective signing power. The system is managed by the contract's deployer, designated internally as the relayer, a trusted third-party which can unlock funds and return them their original sender. If the contract’s balances under threat, the relayer can pause the system, temporarily preventing users from depositing additional funds.
 
-The CashPool Smart Contract is deployed on the Ropsten testnet at address: 0x3de4ef81Ba6243A60B0a32d3BCeD4173b6EA02bb
-
 ### Architecture Diagram
 ![CashPoolarchitecturediagram](https://user-images.githubusercontent.com/15370712/58388886-632c7700-7fd9-11e9-962e-4e5e9d92c275.png)
 
