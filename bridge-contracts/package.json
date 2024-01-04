@@ -23,12 +23,15 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-bignumber": "^3.0.0",
-    "web3": "^1.0.0-beta.52",
+    "web3": "^0.20.7",
     "web3-utils": "^1.0.0-beta.52"
   },
   "scripts": {
     "develop": "truffle develop",
     "test": "truffle test",
     "exit": ".exit"
+  },
+  "engines": {
+    "node": "^12"
   }
 }
