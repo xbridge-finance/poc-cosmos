@@ -34,7 +34,7 @@ contract Processor {
     * @dev: Constructor, initalizes item count.
     */
     constructor() 
-        public
+        public 
     {
         nonce = 0;
     }

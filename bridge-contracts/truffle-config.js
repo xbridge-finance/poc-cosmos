@@ -8,16 +8,7 @@ module.exports = {
       port: 8545,
       network_id: "*",
       gas: 6000000,
-      gasPrice: 200000000000,
-      solc: {
-        version: "0.8.19+commit.7dd6d404",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 20   // Optimize for how many times you intend to run the code
-          },
-        },
-      }
+      gasPrice: 200000000000
     },
     ganache: {
       host: "127.0.0.1",
@@ -48,5 +39,16 @@ module.exports = {
   },
   mocha: {
     useColors: true
+  },
+  compilers: {
+    solc: {
+      version: "0.8.19+commit.7dd6d404",
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 20   // Optimize for how many times you intend to run the code
+        },
+      },
+    },
   },
 };

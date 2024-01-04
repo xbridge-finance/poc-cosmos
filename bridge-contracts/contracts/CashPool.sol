@@ -84,7 +84,7 @@ contract CashPool is Processor {
     {
         relayer = msg.sender;
         active = true;
-        emit LogLockingActivated(now);
+        emit LogLockingActivated(block.timestamp);
     }
 
     /* 
@@ -115,7 +115,7 @@ contract CashPool is Processor {
 
         //Create an item with a unique key.
         bytes32 id = create(
-            msg.sender,
+            payable(msg.sender),
             _recipient,
             _token,
             _amount
@@ -251,7 +251,7 @@ contract CashPool is Processor {
     {
         require(active);
         active = false;
-        emit LogLockingPaused(now);
+        emit LogLockingPaused(block.timestamp);
     }
 
     /*
@@ -263,6 +263,6 @@ contract CashPool is Processor {
     {
         require(!active);
         active = true;
-        emit LogLockingActivated(now);
+        emit LogLockingActivated(block.timestamp);
     }
 }

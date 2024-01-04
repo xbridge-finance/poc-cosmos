@@ -7,8 +7,6 @@ import "../Processor.sol";
 contract TestProcessor is Processor {
 
     event LogItemCreated(bytes32 _id);
-    
-    function() external payable {}
 
     //Wrapper function to test internal method
     function callCreate(
